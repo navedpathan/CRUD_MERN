@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const Connection = async() =>{
-    const URL =`mongodb+srv://mahesh:Kln1iWjNOHrp29Ad@cluster0.ek8sc.mongodb.net/?retryWrites=true&w=majority`;
     try{
-        await mongoose.connect(URL,{useUnifiedTopology: true, useNewUrlParser:true});
+        await mongoose.connect(process.env.MONGO_URI, {useUnifiedTopology: true, useNewUrlParser:true});
         console.log("Database Connected Successfully")
     }
     catch(err){

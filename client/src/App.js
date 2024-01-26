@@ -5,6 +5,7 @@ import AddUser from './components/AddUser';
 import AllUser from './components/AllUser';
 import Home from './components/Home';
 import UpdateUser from './components/UpdateUser';
+
 function App() {
   return (
     <Router>

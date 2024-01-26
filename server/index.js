@@ -11,20 +11,16 @@ const app = express();
 // initiliazed env file
 dotenv.config();
 // for data crossing from front-end to backend (to cross the different server)
-// app.use(cors(
-//   {
-//         origin: "https://crud-mern-client-pi.vercel.app",
-//         methods:["POST","GET","PUT","DELETE","*"],
-//         credentials:true
-//     }
-// ));
+
+let originUrl = process.env.ORIGIN_URL;
 app.use(cors(
   {
-        origin: "https://crud-react-js-client.vercel.app",
+        origin: {originUrl},
+        // origin: "https://crud-react-js-client.vercel.app",
         methods:["POST","GET","PUT","DELETE","*"],
         credentials:true
-    }
-));
+    }  
+  ));
 
 // app.use(cors());
 
