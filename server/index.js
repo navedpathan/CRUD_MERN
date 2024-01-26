@@ -20,7 +20,7 @@ dotenv.config();
 // ));
 app.use(cors(
   {
-        origin: "http://localhost:3000",
+        origin: "https://crud-react-js-client.vercel.app",
         methods:["POST","GET","PUT","DELETE","*"],
         credentials:true
     }
