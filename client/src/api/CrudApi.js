@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const apiKey = 'http://localhost:9900';
-const apiKey = 'https://crud-react-js-api.vercel.app';
+const apiKey = process.env.REACT_APP_API_KEY;
 
 // adduser api
 export const addUser = async(data) => {
