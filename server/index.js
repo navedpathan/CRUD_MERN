@@ -1,12 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 
-import Router from "./router/route.js";
+// import Router from "./router/route.js";
 import Connection from "./db.js";
 
 const app = express();
+app.use(express.json());
 
 // initiliazed env file
 dotenv.config();
@@ -33,7 +34,7 @@ app.use(cors(
 // app.use(bodyParser.urlencoded({extended:true}));
 
 // using different function on f=different route
-app.use('/',Router);
+// app.use('/',Router);
 
 const PORT = 9900;
 
