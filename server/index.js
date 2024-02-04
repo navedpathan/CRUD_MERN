@@ -12,17 +12,17 @@ const app = express();
 dotenv.config();
 // for data crossing from front-end to backend (to cross the different server)
 
-// let originUrl = process.env.ORIGIN_URL;
-// app.use(cors(
-//   {
-//         origin: {originUrl},
-//         // origin: "https://crud-react-js-client.vercel.app",
-//         methods:["POST","GET","PUT","DELETE","*"],
-//         credentials:true
-//     }  
-//   ));
+let originUrl = process.env.ORIGIN_URL;
+app.use(cors(
+  {
+        origin: {originUrl},
+        // origin: "https://crud-react-js-client.vercel.app",
+        methods:["POST","GET","PUT","DELETE","*"],
+        credentials:true
+    }  
+  ));
 
-app.use(cors());
+// app.use(cors());
 
 // squence should be maintain
 
